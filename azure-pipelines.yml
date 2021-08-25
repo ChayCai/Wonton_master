@@ -1,0 +1,312 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+trigger:
+  branches:
+    include:
+    - master
+  tags:
+    include:
+    - v*
+
+jobs:
+- job: Linux20
+  pool:
+    vmImage: 'ubuntu-20.04'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - bash: ./tools/dotnet-cake --useMagic=false --AdditionalName="ubuntu-20.04" --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on Linux'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.Linux20'
+
+- job: Linux18
+  pool:
+    vmImage: 'ubuntu-18.04'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - bash: ./tools/dotnet-cake --useMagic=false --AdditionalName="ubuntu-18.04" --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on Linux'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.Linux18'
+
+- job: Linux16
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+    
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - bash: ./tools/dotnet-cake --useMagic=false --AdditionalName="ubuntu-16.04" --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on Linux'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.Linux16'
+
+- job: LinuxArm
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - bash: ./tools/dotnet-cake --useMagic=false --targetArch=arm --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on Linux'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.LinuxArm'
+
+- job: LinuxArm64
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - bash: ./tools/dotnet-cake --useMagic=false --targetArch=arm64 --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on Linux'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.LinuxArm64'
+
+- job: macOS
+  pool:
+    vmImage: 'macos-10.15'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+    
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '13.x' 
+      checkLatest: false # Optional
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - bash: ./tools/dotnet-cake --useMagic=false --AdditionalName="10.15" --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on macOS'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.macOS'
+
+- job: macOS14
+  pool:
+    vmImage: 'macos-10.14'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+    
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '13.x' 
+      checkLatest: false # Optional
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - bash: ./tools/dotnet-cake --useMagic=false --AdditionalName="10.14" --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on macOS'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.macOS14'
+
+- job: Windows
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+    
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - pwsh: ./tools/dotnet-cake --useMagic=false --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on Windows'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.Windows'
+
+- job: Windows2
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+    
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+  
+  - script: dotnet tool install --tool-path tools Cake.Tool
+    displayName: 'Install Cake'
+  
+  - pwsh: ./tools/dotnet-cake --useMagic=false --FxDeps=true --releaseDir="$(Build.ArtifactStagingDirectory)"
+    displayName: 'Build on Windows'
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      publishLocation: 'pipeline'
+      artifactName: 'Wonton.Windows2'
+
+- job: GithubRelease
+  pool: 
+    vmImage: 'ubuntu-latest'
+  dependsOn:
+  - Linux20
+  - Linux18
+  - Linux16
+  - LinuxArm
+  - LinuxArm64
+  - macOS
+  - macOS14
+  - Windows
+  - Windows2
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+    
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      buildType: 'current'
+      itemPattern: '**'
+      targetPath: '$(System.DefaultWorkingDirectory)/Build'
+
+  - pwsh: ./PackageManager/github/CopyToRelease.ps1 -From Build -Release $(Build.ArtifactStagingDirectory)
+    displayName: 'Copy Release'
+
+  - task: GitHubRelease@1
+    inputs:
+      gitHubConnection: 'github.com_WangyuHello'
+      repositoryName: 'WangyuHello/Wonton'
+      action: 'create'
+      target: '$(Build.SourceVersion)'
+      tagSource: 'gitTag'
+      releaseNotesSource: 'inline'
+      addChangeLog: false
+  
+- job: ChocolateyRelease
+  pool:
+    vmImage: 'windows-latest'
+  dependsOn:
+  - Windows
+  steps:
+  - checkout: self
+    submodules: true
+    persistCredentials: true
+  
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      buildType: 'current'
+      itemPattern: '**'
+      targetPath: '$(System.DefaultWorkingDirectory)\Build'
+
+  - pwsh: ./PackageManager/github/CopyToRelease.ps1 -From Build -Release $(Build.ArtifactStagingDirectory)
+    displayName: 'Copy Release'
+
+  - pwsh: Install-Module EPS -Scope CurrentUser -Force
+    displayName: 'Install Dependences'
+
+  - pwsh: ./PackageManager/chocolatey/CreateChocoPackage.ps1 -ReleasePath $(Build.ArtifactStagingDirectory)
+    displayName: 'Create Chocolatey Package'
+  
+  - pwsh: ./PackageManager/chocolatey/UploadChocoPackage.ps1 -API_KEY $(CHOCOLATEY_API_KEY) -CommitSHA $(Build.SourceVersion)
+    displayName: 'Upload Chocolatey Package'

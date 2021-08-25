@@ -1,0 +1,189 @@
+.LEDText {
+    display: inline-block;
+    height: 80px;
+}
+
+.LEDText #panel {
+    height: 150px;
+    width: 840px;
+    background-color: #43506C;
+    position: absolute;
+    border-radius: 4px;
+    margin-left: -420px;
+    margin-top: -30px;
+}
+
+.LEDText span {
+    width: 45px;
+    height: 50px;
+    font-size: 30px;
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    background-color: #3D6198;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+
+.LEDText #char0_0 {
+    margin-top: -10px;
+    margin-left: -400px;
+}
+
+.LEDText #char0_1 {
+    margin-top: -10px;
+    margin-left: -350px;
+}
+
+.LEDText #char0_2 {
+    margin-top: -10px;
+    margin-left: -300px;
+}
+
+.LEDText #char0_3 {
+    margin-top: -10px;
+    margin-left: -250px;
+}
+
+.LEDText #char0_4 {
+    margin-top: -10px;
+    margin-left: -200px;
+}
+
+.LEDText #char0_5 {
+    margin-top: -10px;
+    margin-left: -150px;
+}
+
+.LEDText #char0_6 {
+    margin-top: -10px;
+    margin-left: -100px;
+}
+
+.LEDText #char0_7 {
+    margin-top: -10px;
+    margin-left: -50px;
+}
+
+.LEDText #char0_8 {
+    margin-top: -10px;
+    margin-left: 0px;
+}
+
+.LEDText #char0_9 {
+    margin-top: -10px;
+    margin-left: 50px;
+}
+
+.LEDText #char0_10 {
+    margin-top: -10px;
+    margin-left: 100px;
+}
+
+.LEDText #char0_11 {
+    margin-top: -10px;
+    margin-left: 150px;
+}
+
+.LEDText #char0_12 {
+    margin-top: -10px;
+    margin-left: 200px;
+}
+
+.LEDText #char0_13 {
+    margin-top: -10px;
+    margin-left: 250px;
+}
+
+.LEDText #char0_14 {
+    margin-top: -10px;
+    margin-left: 300px;
+}
+
+.LEDText #char0_15 {
+    margin-top: -10px;
+    margin-left: 350px;
+}
+
+.LEDText #char1_0 {
+    margin-top: 50px;
+    margin-left: -400px;
+}
+
+.LEDText #char1_1 {
+    margin-top: 50px;
+    margin-left: -350px;
+}
+
+.LEDText #char1_2 {
+    margin-top: 50px;
+    margin-left: -300px;
+}
+
+.LEDText #char1_3 {
+    margin-top: 50px;
+    margin-left: -250px;
+}
+
+.LEDText #char1_4 {
+    margin-top: 50px;
+    margin-left: -200px;
+}
+
+.LEDText #char1_5 {
+    margin-top: 50px;
+    margin-left: -150px;
+}
+
+.LEDText #char1_6 {
+    margin-top: 50px;
+    margin-left: -100px;
+}
+
+.LEDText #char1_7 {
+    margin-top: 50px;
+    margin-left: -50px;
+}
+
+.LEDText #char1_8 {
+    margin-top: 50px;
+    margin-left: 0px;
+}
+
+.LEDText #char1_9 {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.LEDText #char1_10 {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.LEDText #char1_11 {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.LEDText #char1_12 {
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.LEDText #char1_13 {
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.LEDText #char1_14 {
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
+.LEDText #char1_15 {
+    margin-top: 50px;
+    margin-left: 350px;
+}

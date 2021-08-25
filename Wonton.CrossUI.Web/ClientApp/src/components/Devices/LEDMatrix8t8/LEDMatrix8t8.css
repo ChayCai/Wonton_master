@@ -1,0 +1,348 @@
+.LEDMatrix8t8 {
+    display: inline-block;
+    height: 160px;
+}
+
+.LEDMatrix8t8 #panel {
+    height: 172px;
+    width: 172px;
+    background-color: #43506C;
+    position: absolute;
+    margin-left: -88px;
+    margin-top: -8px;
+    border-radius: 4px;
+}
+
+.LEDMatrix8t8 span {
+    width: 16px;
+    height: 16px;
+    background: #3D6198;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.LEDMatrix8t8 #dot0_0 {
+    margin-top: 0px;
+    margin-left: -80px;
+}
+
+.LEDMatrix8t8 #dot0_1 {
+    margin-top: 0px;
+    margin-left: -60px;
+}
+
+.LEDMatrix8t8 #dot0_2 {
+    margin-top: 0px;
+    margin-left: -40px;
+}
+
+.LEDMatrix8t8 #dot0_3 {
+    margin-top: 0px;
+    margin-left: -20px;
+}
+
+.LEDMatrix8t8 #dot0_4 {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.LEDMatrix8t8 #dot0_5 {
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.LEDMatrix8t8 #dot0_6 {
+    margin-top: 0px;
+    margin-left: 40px;
+}
+
+.LEDMatrix8t8 #dot0_7 {
+    margin-top: 0px;
+    margin-left: 60px;
+}
+
+.LEDMatrix8t8 #dot1_0 {
+    margin-top: 20px;
+    margin-left: -80px;
+}
+
+.LEDMatrix8t8 #dot1_1 {
+    margin-top: 20px;
+    margin-left: -60px;
+}
+
+.LEDMatrix8t8 #dot1_2 {
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.LEDMatrix8t8 #dot1_3 {
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+.LEDMatrix8t8 #dot1_4 {
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.LEDMatrix8t8 #dot1_5 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.LEDMatrix8t8 #dot1_6 {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.LEDMatrix8t8 #dot1_7 {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.LEDMatrix8t8 #dot2_0 {
+    margin-top: 40px;
+    margin-left: -80px;
+}
+
+.LEDMatrix8t8 #dot2_1 {
+    margin-top: 40px;
+    margin-left: -60px;
+}
+
+.LEDMatrix8t8 #dot2_2 {
+    margin-top: 40px;
+    margin-left: -40px;
+}
+
+.LEDMatrix8t8 #dot2_3 {
+    margin-top: 40px;
+    margin-left: -20px;
+}
+
+.LEDMatrix8t8 #dot2_4 {
+    margin-top: 40px;
+    margin-left: 0px;
+}
+
+.LEDMatrix8t8 #dot2_5 {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.LEDMatrix8t8 #dot2_6 {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.LEDMatrix8t8 #dot2_7 {
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+.LEDMatrix8t8 #dot3_0 {
+    margin-top: 60px;
+    margin-left: -80px;
+}
+
+.LEDMatrix8t8 #dot3_1 {
+    margin-top: 60px;
+    margin-left: -60px;
+}
+
+.LEDMatrix8t8 #dot3_2 {
+    margin-top: 60px;
+    margin-left: -40px;
+}
+
+.LEDMatrix8t8 #dot3_3 {
+    margin-top: 60px;
+    margin-left: -20px;
+}
+
+.LEDMatrix8t8 #dot3_4 {
+    margin-top: 60px;
+    margin-left: 0px;
+}
+
+.LEDMatrix8t8 #dot3_5 {
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.LEDMatrix8t8 #dot3_6 {
+    margin-top: 60px;
+    margin-left: 40px;
+}
+
+.LEDMatrix8t8 #dot3_7 {
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.LEDMatrix8t8 #dot4_0 {
+    margin-top: 80px;
+    margin-left: -80px;
+}
+
+.LEDMatrix8t8 #dot4_1 {
+    margin-top: 80px;
+    margin-left: -60px;
+}
+
+.LEDMatrix8t8 #dot4_2 {
+    margin-top: 80px;
+    margin-left: -40px;
+}
+
+.LEDMatrix8t8 #dot4_3 {
+    margin-top: 80px;
+    margin-left: -20px;
+}
+
+.LEDMatrix8t8 #dot4_4 {
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.LEDMatrix8t8 #dot4_5 {
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.LEDMatrix8t8 #dot4_6 {
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.LEDMatrix8t8 #dot4_7 {
+    margin-top: 80px;
+    margin-left: 60px;
+}
+
+.LEDMatrix8t8 #dot5_0 {
+    margin-top: 100px;
+    margin-left: -80px;
+}
+
+.LEDMatrix8t8 #dot5_1 {
+    margin-top: 100px;
+    margin-left: -60px;
+}
+
+.LEDMatrix8t8 #dot5_2 {
+    margin-top: 100px;
+    margin-left: -40px;
+}
+
+.LEDMatrix8t8 #dot5_3 {
+    margin-top: 100px;
+    margin-left: -20px;
+}
+
+.LEDMatrix8t8 #dot5_4 {
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+.LEDMatrix8t8 #dot5_5 {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.LEDMatrix8t8 #dot5_6 {
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+.LEDMatrix8t8 #dot5_7 {
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+.LEDMatrix8t8 #dot6_0 {
+    margin-top: 120px;
+    margin-left: -80px;
+}
+
+.LEDMatrix8t8 #dot6_1 {
+    margin-top: 120px;
+    margin-left: -60px;
+}
+
+.LEDMatrix8t8 #dot6_2 {
+    margin-top: 120px;
+    margin-left: -40px;
+}
+
+.LEDMatrix8t8 #dot6_3 {
+    margin-top: 120px;
+    margin-left: -20px;
+}
+
+.LEDMatrix8t8 #dot6_4 {
+    margin-top: 120px;
+    margin-left: 0px;
+}
+
+.LEDMatrix8t8 #dot6_5 {
+    margin-top: 120px;
+    margin-left: 20px;
+}
+
+.LEDMatrix8t8 #dot6_6 {
+    margin-top: 120px;
+    margin-left: 40px;
+}
+
+.LEDMatrix8t8 #dot6_7 {
+    margin-top: 120px;
+    margin-left: 60px;
+}
+
+.LEDMatrix8t8 #dot7_0 {
+    margin-top: 140px;
+    margin-left: -80px;
+}
+
+.LEDMatrix8t8 #dot7_1 {
+    margin-top: 140px;
+    margin-left: -60px;
+}
+
+.LEDMatrix8t8 #dot7_2 {
+    margin-top: 140px;
+    margin-left: -40px;
+}
+
+.LEDMatrix8t8 #dot7_3 {
+    margin-top: 140px;
+    margin-left: -20px;
+}
+
+.LEDMatrix8t8 #dot7_4 {
+    margin-top: 140px;
+    margin-left: 0px;
+}
+
+.LEDMatrix8t8 #dot7_5 {
+    margin-top: 140px;
+    margin-left: 20px;
+}
+
+.LEDMatrix8t8 #dot7_6 {
+    margin-top: 140px;
+    margin-left: 40px;
+}
+
+.LEDMatrix8t8 #dot7_7 {
+    margin-top: 140px;
+    margin-left: 60px;
+}
+
+.LEDMatrix8t8 span.on {
+    background: #ffffff;
+}

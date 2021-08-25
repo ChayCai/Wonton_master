@@ -1,0 +1,9 @@
+.darkmode .card-body {
+    color: rgba(255, 255, 255, 0.8);
+}
+.darkmode .caption {
+    color: white;
+}
+.caption {
+    color: black;
+}

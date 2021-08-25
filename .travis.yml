@@ -1,0 +1,41 @@
+language: csharp
+solution: Wonton.sln
+mono: none
+dotnet: 3.1.101
+node_js: "node"
+
+os:
+  - linux
+  - osx
+  # - windows
+
+osx_image: xcode11.3
+
+env:
+  - CI=false
+
+# cache:
+#   directories:
+#     - "Wonton.CrossUI.Web/ClientApp/node_modules"
+
+before_install:
+  - dotnet tool install --tool-path tools Cake.Tool
+
+install:
+  - dotnet restore Wonton.CrossUI.Web/Wonton.CrossUI.Web.csproj
+
+script:
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then ./tools/dotnet-cake --useMagic=false --AdditionalName="macOS.10.14"                 ; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then ./tools/dotnet-cake --useMagic=false --targetOS="win" --AdditionalName="travis-ci"   ; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then ./tools/dotnet-cake --useMagic=false --AdditionalName="ubuntu.16.04"              ; fi
+  # - ./tools/dotnet-cake -useMagic="false"
+
+# deploy交给azure pipelines
+# deploy:
+#   provider: releases
+#   api_key: ${GITHUB_TOKEN}
+#   file: Wonton.CrossUI.Web/bin/Desktop/*.7z
+#   file_glob: true
+#   skip_cleanup: true
+#   on:
+#     tags: true

@@ -1,0 +1,109 @@
+.LEDMatrix4t4 {
+    display: inline-block;
+    height: 80px;
+}
+
+.LEDMatrix4t4 #panel {
+    height: 92px;
+    width: 92px;
+    background-color: #43506C;
+    position: absolute;
+    margin-left: -48px;
+    margin-top: -8px;
+    border-radius: 4px;
+}
+
+.LEDMatrix4t4 span {
+    width: 16px;
+    height: 16px;
+    background: #3D6198;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.LEDMatrix4t4 #dot0_0 {
+    margin-top: 0px;
+    margin-left: -40px;
+}
+
+.LEDMatrix4t4 #dot0_1 {
+    margin-top: 0px;
+    margin-left: -20px;
+}
+
+.LEDMatrix4t4 #dot0_2 {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.LEDMatrix4t4 #dot0_3 {
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+
+.LEDMatrix4t4 #dot1_0 {
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.LEDMatrix4t4 #dot1_1 {
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+.LEDMatrix4t4 #dot1_2 {
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.LEDMatrix4t4 #dot1_3 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.LEDMatrix4t4 #dot2_0 {
+    margin-top: 40px;
+    margin-left: -40px;
+}
+
+.LEDMatrix4t4 #dot2_1 {
+    margin-top: 40px;
+    margin-left: -20px;
+}
+
+.LEDMatrix4t4 #dot2_2 {
+    margin-top: 40px;
+    margin-left: 0px;
+}
+
+.LEDMatrix4t4 #dot2_3 {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.LEDMatrix4t4 #dot3_0 {
+    margin-top: 60px;
+    margin-left: -40px;
+}
+
+.LEDMatrix4t4 #dot3_1 {
+    margin-top: 60px;
+    margin-left: -20px;
+}
+
+.LEDMatrix4t4 #dot3_2 {
+    margin-top: 60px;
+    margin-left: 0px;
+}
+
+.LEDMatrix4t4 #dot3_3 {
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.LEDMatrix4t4 span.on {
+    background: #ffffff;
+}

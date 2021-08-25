@@ -1,0 +1,101 @@
+{
+  "name": "wonton",
+  "description": "Virtual GUI for FPGA",
+  "version": "1.1.1",
+  "main": "main.js",
+  "author": {
+    "name": "Wang Yu",
+    "email": "wwangyuu@outlook.com",
+    "url": "https://www.github.com/WangyuHello"
+  },
+  "license": "MIT",
+  "homepage": "https://www.github.com/WangyuHello/Wonton",
+  "repository": "https://www.github.com/WangyuHello/Wonton",
+  "maintainer": "Wang Yu",
+  "scripts": {
+    "prestart": "tsc",
+    "start": "cross-env NODE_ENV=development electron .",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.0",
+    "portscanner": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.12",
+    "@types/portscanner": "^2.1.0",
+    "cross-env": "^7.0.2",
+    "electron": "11.3.0",
+    "electron-builder": "^22.9.0",
+    "typescript": "^3.8.3",
+    "ini": "^1.3.6"
+  },
+  "build": {
+    "appId": "edu.Wonton.app",
+    "productName": "Wonton",
+    "copyright": "Copyright © 2021 Wang Yu",
+    "compression": "maximum",
+    "directories": {
+      "output": "../../../../Wonton.CrossUI.Web/bin/Desktop"
+    },
+    "extraResources": [
+      {
+        "from": "./bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "files": [
+      {
+        "from": "./ElectronHostHook/node_modules",
+        "to": "ElectronHostHook/node_modules",
+        "filter": [
+          "**/*"
+        ]
+      },
+      "**/*"
+    ],
+    "win": {
+      "icon": "./bin/ClientApp/build/chip.ico",
+      "artifactName": "${productName}-${version}-${os}-${arch}${env.ADDI_NAME}${env.FXDEPS}.${ext}",
+      "target": [
+        "7z",
+        "nsis"
+      ]
+    },
+    "mac": {
+      "icon": "./bin/ClientApp/build/chip.icns",
+      "artifactName": "${productName}-${version}-${os}-${arch}${env.ADDI_NAME}.${ext}",
+      "target": [
+        "7z",
+        "dmg"
+      ]
+    },
+    "linux": {
+      "icon": "./bin/ClientApp/build/icons",
+      "artifactName": "${productName}-${version}-${os}-${arch}${env.ADDI_NAME}.${ext}",
+      "category": "Education",
+      "target": [
+        "7z",
+        "deb"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "./bin/ClientApp/build/chip.ico",
+      "uninstallerIcon": "./bin/ClientApp/build/chip.ico",
+      "installerHeaderIcon": "./bin/ClientApp/build/chip.ico",
+      "artifactName": "${productName}-${version}-${os}-${arch}${env.ADDI_NAME}${env.FXDEPS}-setup.${ext}",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "dmg": {
+      "artifactName": "${productName}-${version}-${os}-${arch}${env.ADDI_NAME}.${ext}"
+    },
+    "deb": {
+      "artifactName": "${productName}-${version}-${os}-${arch}${env.ADDI_NAME}.${ext}"
+    }
+  }
+}
