@@ -9,7 +9,7 @@ export class HButton extends Component {
     outputPorts = ['输出1']
 
     static defaultProps = {
-        name: '按钮',
+        name: '开关',
         ports: ['输出1'],
         portsDirs: ['输出']
     }
