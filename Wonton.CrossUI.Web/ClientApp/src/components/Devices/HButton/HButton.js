@@ -36,7 +36,7 @@ export class HButton extends Component {
                 outputs : [nextOutput],
             }
         });
-        
+
         manager.UpdateInput(this.props.instance, [1 - this.state.outputs[0]]);
     }
 

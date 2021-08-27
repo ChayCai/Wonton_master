@@ -1,5 +1,7 @@
 import { LED } from "./LED/LED";
 import { LEDCore } from "./LED/LEDCore";
+import { Button } from "./Button/Button";
+import { ButtonCore } from "./Button/ButtonCore";
 import { HButton } from "./HButton/HButton";
 import { HButtonCore } from "./HButton/HButtonCore";
 import { SevenSegmentLED } from "./SevenSegmentLED/SevenSegmentLED";
@@ -15,6 +17,7 @@ import { LEDTextCore } from "./LEDText/LEDTextCore";
 
 export const deviceMap = new Map([
     ['LED', [LED, LEDCore]],
+    ['Button', [Button, ButtonCore]],
     ['HButton', [HButton, HButtonCore]],
     ['SevenSegmentLED', [SevenSegmentLED, SevenSegmentLEDCore]],
     ['LEDMatrix4t4', [LEDMatrix4t4, LEDMatrix4t4Core]],
