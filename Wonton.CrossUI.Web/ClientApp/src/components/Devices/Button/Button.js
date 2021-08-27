@@ -30,30 +30,28 @@ export class Button extends Component {
 
     MouseDown = (event) => {
         this.setState((prevState) => {
-            let nextOutput = 1 - prevState.outputs[0];
-            console.log("Button click " + this.props.instance + ": " + nextOutput)
+            let nextOutput = 0 ;
+            console.log("Mouse Down " + this.props.instance + ": " + nextOutput)
             return {
-                outputs: [nextOutput],
+                outputs: 0,
             }
         });
-        console.log("Mouse Down Detected");
-        console.log(this.state.outputs[0]);
+        console.log("stateoutput " + this.state.outputs);
 
-        manager.UpdateInput(this.props.instance, [1 - this.state.outputs[0]]);
+        manager.UpdateInput(this.props.instance, [1]);
     }
 
     MouseUp = (event) => {
         this.setState((prevState) => {
-            let nextOutput = 1 - prevState.outputs[0];
-            console.log("Button click " + this.props.instance + ": " + nextOutput)
+            let nextOutput = 1;
+            console.log("Mouse Up " + this.props.instance + ": " + nextOutput)
             return {
-                outputs: [nextOutput],
+                outputs: 1,
             }
         });
-        console.log("Mouse Up Detected");
-        console.log(this.state.outputs[0]);
+        console.log("stateoutput "+this.state.outputs);
 
-        manager.UpdateInput(this.props.instance, [1 - this.state.outputs[0]]);
+        manager.UpdateInput(this.props.instance, [0]);
     }
 
     render() {
