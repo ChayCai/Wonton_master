@@ -36,7 +36,6 @@ export class Button extends Component {
                 outputs: 0,
             }
         });
-        console.log("stateoutput " + this.state.outputs);
 
         manager.UpdateInput(this.props.instance, [1]);
     }
@@ -49,7 +48,6 @@ export class Button extends Component {
                 outputs: 1,
             }
         });
-        console.log("stateoutput "+this.state.outputs);
 
         manager.UpdateInput(this.props.instance, [0]);
     }
