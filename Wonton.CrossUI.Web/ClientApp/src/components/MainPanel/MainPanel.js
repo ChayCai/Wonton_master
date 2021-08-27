@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import RGL, { WidthProvider } from "react-grid-layout";
-import { deviceMap } from "../Devices/Devices";
+import { DeviceMap } from "../Devices/Devices";
 import { DeviceLayout } from '../Devices/DeviceLayout';
 import { Modal, ModalHeader, ModalBody, Table, Input, ModalFooter, Button } from 'reactstrap';
 import _ from 'lodash';
@@ -30,7 +30,7 @@ export class MainPanel extends PureComponent {
             this.setState({
                 layout: data.layout,
                 instanceCounter: data.layout.length
-            }, ()=> {
+            }, () => {
                 this.layoutChangeFlag = true;
                 // console.log("state callback2")
             });
@@ -75,7 +75,7 @@ export class MainPanel extends PureComponent {
 
         this.setState((prevState) => {
             return {
-                isSettingModalOpen : !prevState.isSettingModalOpen,
+                isSettingModalOpen: !prevState.isSettingModalOpen,
                 selectedDevice: insName,
                 selectedDevicePorts: ports,
                 selectedDevicePortsDirection: portsDirs,
@@ -87,7 +87,7 @@ export class MainPanel extends PureComponent {
     OnSettingModalToggle = (event) => {
         this.setState((prevState) => {
             return {
-                isSettingModalOpen : !prevState.isSettingModalOpen,
+                isSettingModalOpen: !prevState.isSettingModalOpen,
             }
         });
     }
@@ -95,7 +95,7 @@ export class MainPanel extends PureComponent {
     OnRemoveClick = (event, instance) => {
         console.log(`Remove device: ${instance}`);
 
-        let newLayout = _.reject(this.state.layout, {i: instance});
+        let newLayout = _.reject(this.state.layout, { i: instance });
         //更新当前状态和PJManager中的值
         pjManager.layout = newLayout;
         this.props.onModified(true);
@@ -105,7 +105,7 @@ export class MainPanel extends PureComponent {
         });
     }
 
-    OnPortChange = (event, index, direction, instance) =>　{
+    OnPortChange = (event, index, direction, instance) => {
         let prevConnectionMap = this.state.projectConnections;
         let prevConnection = prevConnectionMap.get(instance);
         prevConnection[index] = event.target.value;
@@ -122,10 +122,10 @@ export class MainPanel extends PureComponent {
         this.setState({
             projectConnections: prevConnectionMap
         });
-        
+
     }
 
-    GenPortsSelects = (instance, index, direction) => { 
+    GenPortsSelects = (instance, index, direction) => {
         let projectPorts = direction === "输出" ? manager.GetProjectInputPorts() : manager.GetProjectOutputPorts(); //组件的输入接硬件的输出
 
         let selected = "";
@@ -143,22 +143,22 @@ export class MainPanel extends PureComponent {
                     return <option key={index} >
                         {value}
                     </option>
-                    
+
                 })
             }
         </Input>
     }
 
     SettingTable = <Table hover>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>组件端口</th>
-                    <th>I/O</th>
-                    <th>硬件端口</th>
-                </tr>
-            </thead>
-        </Table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>组件端口</th>
+                <th>I/O</th>
+                <th>硬件端口</th>
+            </tr>
+        </thead>
+    </Table>
 
     GenerateSettingTable = (instance) => {
         let ports = instance.props.ports;
@@ -204,8 +204,8 @@ export class MainPanel extends PureComponent {
         console.log(`Add instance: ${name} at (${nextX}, ${nextY})`);
 
         let newLayout = this.state.layout.concat({
-            i: 'i' + insCounter, device: name, x: nextX, 
-             y: nextY,w:3,h:3, minW:3, minH:3
+            i: 'i' + insCounter, device: name, x: nextX,
+            y: nextY, w: 3, h: 3, minW: 3, minH: 3
         });
 
         // console.log(newLayout)
@@ -225,7 +225,7 @@ export class MainPanel extends PureComponent {
     GenLayoutDevices = (layout) => {
         // console.log(layout);
         return _.map(layout, el => {
-        
+
             // let dev = <div></div>
 
             // switch (el.device) {
@@ -239,7 +239,7 @@ export class MainPanel extends PureComponent {
             //         break;
             // }
             console.log(el);
-            let dev = React.createElement(deviceMap.get(el.device)[0], {instance: el.i})
+            let dev = React.createElement(DeviceMap.get(el.device)[0], { instance: el.i })
 
             return <div key={el.i} data-grid={el} className='grid-base'>
                 <DeviceLayout instance={el.i} OnSettingClick={this.OnSettingClick} OnRemoveClick={(e) => this.OnRemoveClick(e, el.i)}>
@@ -249,7 +249,7 @@ export class MainPanel extends PureComponent {
         });
     }
 
-    OnPortChange2 = (event, index, direction, instance, connections) =>　{
+    OnPortChange2 = (event, index, direction, instance, connections) => {
         connections[index] = event.target.value;
 
         if (direction === "输出") { //组件的输入接硬件的输出
@@ -266,7 +266,7 @@ export class MainPanel extends PureComponent {
         this.forceUpdate();
     }
 
-    GenPortsSelects2 = (instance, index, direction, connections) => { 
+    GenPortsSelects2 = (instance, index, direction, connections) => {
         let projectPorts = direction === "输出" ? manager.GetProjectInputPorts() : manager.GetProjectOutputPorts(); //组件的输入接硬件的输出
 
         let selected = connections[index];
@@ -278,7 +278,7 @@ export class MainPanel extends PureComponent {
                     return <option key={index} >
                         {value}
                     </option>
-                    
+
                 })
             }
         </Input>
@@ -329,7 +329,7 @@ export class MainPanel extends PureComponent {
         selectedDevicePortsDirection: [], // [input, ...]
         selectedDevicePortsConnection: [] // [sec_out[0], ...]
     }
-    
+
     render() {
 
         return (
@@ -344,12 +344,12 @@ export class MainPanel extends PureComponent {
                     <ModalHeader >设置</ModalHeader>
                     <ModalBody>
                         {
-                        /* {this.SettingTable} */
-                        this.GenerateSettingTable2(this.state.selectedDevice, this.state.selectedDevicePorts, this.state.selectedDevicePortsDirection, this.state.selectedDevicePortsConnection)
+                            /* {this.SettingTable} */
+                            this.GenerateSettingTable2(this.state.selectedDevice, this.state.selectedDevicePorts, this.state.selectedDevicePortsDirection, this.state.selectedDevicePortsConnection)
                         }
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="info" onClick={this.OnSettingModalToggle} style={{width: "120px", borderRadius: "20px"}}>确定</Button>
+                        <Button color="info" onClick={this.OnSettingModalToggle} style={{ width: "120px", borderRadius: "20px" }}>确定</Button>
                     </ModalFooter>
                 </Modal>
             </div>

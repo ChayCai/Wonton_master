@@ -15,10 +15,14 @@ import { LEDMatrix16t16Core } from "./LEDMatrix16t16/LEDMatrix16t16Core";
 import { LEDText } from "./LEDText/LEDText";
 import { LEDTextCore } from "./LEDText/LEDTextCore";
 
-export const deviceMap = new Map([
-    ['LED', [LED, LEDCore]],
+
+export const InputDeviceMap = new Map([
     ['Button', [Button, ButtonCore]],
     ['HButton', [HButton, HButtonCore]],
+])
+
+export const OutputDeviceMap = new Map([
+    ['LED', [LED, LEDCore]],
     ['SevenSegmentLED', [SevenSegmentLED, SevenSegmentLEDCore]],
     ['LEDMatrix4t4', [LEDMatrix4t4, LEDMatrix4t4Core]],
     ['LEDMatrix8t8', [LEDMatrix8t8, LEDMatrix8t8Core]],
@@ -26,14 +30,16 @@ export const deviceMap = new Map([
     ['LEDText', [LEDText, LEDTextCore]]
 ])
 
+export const DeviceMap = new Map([...InputDeviceMap, ...OutputDeviceMap]);
+
 export class Devices {
-    constructor (className, opts) {
-        return new deviceMap[className][0](opts);
+    constructor(className, opts) {
+        return new DeviceMap[className][0](opts);
     }
 }
 
 export class DeviceCore {
-    constructor (className, opts) {
-        return new deviceMap[className][1](opts);
+    constructor(className, opts) {
+        return new DeviceMap[className][1](opts);
     }
 }
