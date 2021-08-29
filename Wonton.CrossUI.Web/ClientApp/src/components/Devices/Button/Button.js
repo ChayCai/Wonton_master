@@ -42,8 +42,6 @@ export class Button extends Component {
 
     MouseUp = (event) => {
         this.setState((prevState) => {
-            let nextOutput = 1;
-            console.log("Mouse Up " + this.props.instance + ": " + nextOutput)
             return {
                 outputs: 1,
             }
