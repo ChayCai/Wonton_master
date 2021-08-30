@@ -1,0 +1,120 @@
+﻿.KeyPad4t4 {
+    display: inline-block;
+    height: 320px;
+}
+
+.KeyPad4t4 #panel {
+    height: 332px;
+    width: 332px;
+    position: absolute;
+    margin-left: -168px;
+    margin-top: -8px;
+    background-color: white;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #707781;
+    border-radius: 4px;
+}
+
+.KeyPad4t4 Button{
+    height: 64px;
+    width: 64px;
+}
+
+.KeyPad4t4 #button_1 {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.KeyPad4t4 #button_2 {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 88px;
+}
+
+.KeyPad4t4 #button_3 {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 168px;
+}
+
+.KeyPad4t4 #button_4 {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 248px;
+}
+
+.KeyPad4t4 #button_5 {
+    position: absolute;
+    margin-top: 88px;
+    margin-left: 8px;
+}
+
+.KeyPad4t4 #button_6 {
+    position: absolute;
+    margin-top: 88px;
+    margin-left: 88px;
+}
+
+.KeyPad4t4 #button_7 {
+    position: absolute;
+    margin-top: 88px;
+    margin-left: 168px;
+}
+
+.KeyPad4t4 #button_8 {
+    position: absolute;
+    margin-top: 88px;
+    margin-left: 248px;
+}
+
+.KeyPad4t4 #button_9 {
+    position: absolute;
+    margin-top: 168px;
+    margin-left: 8px;
+}
+
+.KeyPad4t4 #button_0 {
+    position: absolute;
+    margin-top: 168px;
+    margin-left: 88px;
+}
+
+.KeyPad4t4 #button_A {
+    position: absolute;
+    margin-top: 168px;
+    margin-left: 168px;
+}
+
+.KeyPad4t4 #button_B {
+    position: absolute;
+    margin-top: 168px;
+    margin-left: 248px;
+}
+
+.KeyPad4t4 #button_C {
+    position: absolute;
+    margin-top: 248px;
+    margin-left: 8px;
+}
+
+.KeyPad4t4 #button_D {
+    position: absolute;
+    margin-top: 248px;
+    margin-left: 88px;
+}
+
+.KeyPad4t4 #button_E {
+    position: absolute;
+    margin-top: 248px;
+    margin-left: 168px;
+}
+
+.KeyPad4t4 #button_F {
+    position: absolute;
+    margin-top: 248px;
+    margin-left: 248px;
+}
+
+
