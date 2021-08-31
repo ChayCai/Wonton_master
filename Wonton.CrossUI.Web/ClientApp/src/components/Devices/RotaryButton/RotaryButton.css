@@ -1,0 +1,24 @@
+﻿#button1{
+    height:40px;
+    width: 40px;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: 60px;
+}
+
+#button2 {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin-left: 4px;
+    margin-top: 60px;
+}
+
+#display {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    margin-left: -48px;
+    margin-top: -40px;
+    font-size: 40px;
+}

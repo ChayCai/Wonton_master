@@ -3,7 +3,9 @@ import { ButtonCore } from "./Button/ButtonCore";
 import { HButton } from "./HButton/HButton";
 import { HButtonCore } from "./HButton/HButtonCore";
 import { KeyPad4t4 } from "./KeyPad4t4/KeyPad4t4"
-import { KeyPad4t4Core } from "./KeyPad4t4/KeyPad4t4Core"
+import { KeyPad4t4Core } from "./KeyPad4t4/KeyPad4t4Core";
+import { RotaryButton } from "./RotaryButton/RotaryButton";
+import { RotaryButtonCore } from "./RotaryButton/RotaryButtonCore";
 import { LED } from "./LED/LED";
 import { LEDCore } from "./LED/LEDCore";
 import { SevenSegmentLED } from "./SevenSegmentLED/SevenSegmentLED";
@@ -22,6 +24,7 @@ export const InputDeviceMap = new Map([
     ['Button', [Button, ButtonCore]],
     ['HButton', [HButton, HButtonCore]],
     ['KeyPad4t4', [KeyPad4t4, KeyPad4t4Core]],
+    ['RotaryButton', [RotaryButton, RotaryButtonCore]],
 ])
 
 export const OutputDeviceMap = new Map([
