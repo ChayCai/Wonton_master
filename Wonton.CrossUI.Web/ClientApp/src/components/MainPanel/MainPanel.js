@@ -24,6 +24,7 @@ export class MainPanel extends PureComponent {
     // }
     layoutChangeFlag = false
 
+
     componentWillReceiveProps(nextProps) {
         let data = nextProps.panelData;
         if (data != null && this.state.layout == null) {
@@ -194,18 +195,18 @@ export class MainPanel extends PureComponent {
         return insProjMap;
     }
 
-    OnAdd = (event, name) => {
+    OnAdd = (event, name, size) => {
         let insCounter = this.state.instanceCounter;
         insCounter = insCounter + 1;
         console.log(insCounter)
-        let nextX = (this.state.layout.length * 3) % 24;
-        let nextY = 3 * Math.floor(this.state.layout.length / 8);
+        let nextX = (this.state.layout.length * size[0]) % 24;
+        let nextY = size[1] * Math.floor(this.state.layout.length / 8);
 
         console.log(`Add instance: ${name} at (${nextX}, ${nextY})`);
 
         let newLayout = this.state.layout.concat({
             i: 'i' + insCounter, device: name, x: nextX,
-            y: nextY, w: 3, h: 3, minW: 3, minH: 3
+            y: nextY, w: size[0], h: size[1], minW: size[2], minH: size[3]
         });
 
         // console.log(newLayout)

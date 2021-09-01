@@ -7,7 +7,8 @@ export class KeyPad4t4Core extends Component {
 
     static defaultProps = {
         name: "4x4键盘",
-        ClassName: "KeyPad4t4"
+        ClassName: "KeyPad4t4",
+        size: [9, 12, 9, 12]
     }
 
     render() {

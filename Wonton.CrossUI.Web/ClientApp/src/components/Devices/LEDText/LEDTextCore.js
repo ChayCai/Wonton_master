@@ -6,6 +6,7 @@ export class LEDTextCore extends Component {
     static defaultProps = {
         name: "LED文字显示",
         ClassName: "LEDText",
+        size: [21, 6, 21, 6],
         data: [
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

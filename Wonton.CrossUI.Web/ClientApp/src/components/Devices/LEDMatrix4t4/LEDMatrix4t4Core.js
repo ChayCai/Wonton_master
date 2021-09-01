@@ -7,6 +7,7 @@ export class LEDMatrix4t4Core extends Component {
     static defaultProps = {
         name: "LED阵列4x4",
         ClassName: "LEDMatrix4t4",
+        size: [3, 6, 3, 6],
         onOff: [
             [true, true, true, true],
             [true, true, true, true],

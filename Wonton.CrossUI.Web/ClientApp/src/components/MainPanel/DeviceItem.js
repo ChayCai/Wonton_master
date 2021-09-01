@@ -5,8 +5,8 @@ import './DeviceItem.css';
 
 export class DeviceItem extends Component {
 
-    OnAdd = (event, name) => {
-        this.props.OnAdd(event, name);
+    OnAdd = (event, name, size) => {
+        this.props.OnAdd(event, name, size);
     }
     
     render() {
@@ -16,7 +16,7 @@ export class DeviceItem extends Component {
                     <div className='caption' style={{marginLeft: '10px', marginTop: '12px'}}>
                         {this.props.children.props.name}
                     </div>
-                    <Button onClick={(e) => this.OnAdd(e, this.props.children.props.ClassName)} style={{marginRight: '10px', marginTop: '5px', marginBottom: '5px'}}>添加</Button>
+                    <Button onClick={(e) => this.OnAdd(e, this.props.children.props.ClassName, this.props.children.props.size)} style={{marginRight: '10px', marginTop: '5px', marginBottom: '5px'}}>添加</Button>
                 </div>
             </Card>
         );

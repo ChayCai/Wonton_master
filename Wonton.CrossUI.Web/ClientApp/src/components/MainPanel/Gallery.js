@@ -41,8 +41,8 @@ export class Gallery extends Component {
         });
     }
 
-    OnAdd = (event, name) => {
-        this.props.OnAdd(event, name);
+    OnAdd = (event, name, size) => {
+        this.props.OnAdd(event, name, size);
     }
 
     GenDevices = (inputDeviceMap, outputDeviceMap, curPage) => {

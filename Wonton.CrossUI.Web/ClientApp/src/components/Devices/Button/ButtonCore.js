@@ -9,7 +9,8 @@ export class ButtonCore extends Component {
     
     static defaultProps = {
         name: "按钮",
-        ClassName: "Button"
+        ClassName: "Button",
+        size: [3,3,3,3]
     }
 
     onCheckMouseDown = (e) => {

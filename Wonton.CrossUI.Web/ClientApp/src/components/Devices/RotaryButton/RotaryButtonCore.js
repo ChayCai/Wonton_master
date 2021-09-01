@@ -6,7 +6,8 @@ export class RotaryButtonCore extends Component {
 
     static defaultProps = {
         name: "旋钮",
-        ClassName: "RotaryButton"
+        ClassName: "RotaryButton",
+        size: [3, 6, 3, 6]
     }
 
     render() {

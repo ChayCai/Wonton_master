@@ -7,6 +7,7 @@ export class LEDMatrix16t16Core extends Component {
     static defaultProps = {
         name: "LED阵列16x16",
         ClassName: "LEDMatrix16t16",
+        size: [9, 12, 9, 12],
         onOff: [
             [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
             [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],

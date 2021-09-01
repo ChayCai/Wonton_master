@@ -7,6 +7,7 @@ export class SevenSegmentLEDCore extends Component {
     static defaultProps = {
         name: "七段数码管",
         ClassName: "SevenSegmentLED",
+        size: [3,4,3,4],
         onOff: [true, true, true, true, true, true, true, true]
     }
 

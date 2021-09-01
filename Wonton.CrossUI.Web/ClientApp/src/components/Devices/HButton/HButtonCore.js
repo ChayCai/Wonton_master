@@ -9,7 +9,8 @@ export class HButtonCore extends Component {
     
     static defaultProps = {
         name: "开关",
-        ClassName: "HButton"
+        ClassName: "HButton",
+        size: [3, 3, 3, 3]
     }
 
     onCheckClick = (e) => {

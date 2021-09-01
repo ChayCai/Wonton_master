@@ -7,6 +7,7 @@ export class LEDMatrix8t8Core extends Component {
     static defaultProps = {
         name: "LED阵列8x8",
         ClassName: "LEDMatrix8t8",
+        size: [6, 8, 6, 8],
         onOff: [
             [false, false, false, false, false, false, false, false],
             [false, false, false, false, false, false, false, false],

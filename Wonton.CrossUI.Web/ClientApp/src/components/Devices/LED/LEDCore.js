@@ -8,6 +8,7 @@ export class LEDCore extends Component {
     static defaultProps = {
         name: "LED",
         ClassName: "LED",
+        size: [3, 3, 3, 3],
         onOff: false
     }
 
