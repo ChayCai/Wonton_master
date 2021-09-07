@@ -4,7 +4,7 @@ import { DeviceItem } from './DeviceItem';
 import { Button, ButtonGroup } from 'reactstrap'
 
 import './Gallery.css';
-import { InputDeviceMap, OutputDeviceMap } from "../Devices/Devices";
+import { DataGenDeviceMap, InputDeviceMap, OutputDeviceMap } from "../Devices/Devices";
 
 class GalleryMenu extends Component {
     render() {
@@ -12,6 +12,7 @@ class GalleryMenu extends Component {
             <ButtonGroup>
                 <Button onClick={this.props.onClickINPUT}>INPUT</Button>
                 <Button onClick={this.props.onClickOUTPUT}>OUTPUT</Button>
+                <Button onClick={this.props.onClickDATAGEN}>DATAGEN</Button>
             </ButtonGroup >
         );
     };
@@ -41,17 +42,27 @@ export class Gallery extends Component {
         });
     }
 
+    handleClickDATAGEN = () => {
+        if (this.state.CurPage === "DATAGEN")
+            return
+        this.setState({
+            CurPage: "DATAGEN"
+        });
+    }
+
     OnAdd = (event, name, size) => {
         this.props.OnAdd(event, name, size);
     }
 
-    GenDevices = (inputDeviceMap, outputDeviceMap, curPage) => {
+    GenDevices = (inputDeviceMap, outputDeviceMap, datagenDeviceMap, curPage) => {
         let funcpage = (curPage) => {
             switch (curPage) {
                 case "INPUT":
                     return new Map([...inputDeviceMap]);
                 case "OUTPUT":
                     return new Map([...outputDeviceMap]);
+                case "DATAGEN":
+                    return new Map([...datagenDeviceMap]);
             }
         }
         let deviceMap = funcpage(curPage);
@@ -71,8 +82,8 @@ export class Gallery extends Component {
     render() {
         return (
             <Menu pageWrapId={"panel-content"} outerContainerId={"outer-container"} noOverlay isOpen={this.props.isOpen} onStateChange={(s) => this.props.onGalleryStateChange(s)}>
-                <GalleryMenu onClickINPUT={this.handleClickINPUT} onClickOUTPUT={this.handleClickOUTPUT}></GalleryMenu>
-                {this.GenDevices(InputDeviceMap, OutputDeviceMap, this.state.CurPage)}
+                <GalleryMenu onClickINPUT={this.handleClickINPUT} onClickOUTPUT={this.handleClickOUTPUT} onClickDATAGEN={this.handleClickDATAGEN}></GalleryMenu>
+                {this.GenDevices(InputDeviceMap, OutputDeviceMap, DataGenDeviceMap, this.state.CurPage)}
             </Menu>
         );
     }
