@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { manager } from '../../Service/FPGAManager';
 import { LEDCore } from './LEDCore';
 
+import "./LED.css"
 
 export class LED extends Component {
     
@@ -13,7 +14,8 @@ export class LED extends Component {
     }
 
     state = {
-        inputs: [0]
+        inputs: [0],
+        color: "g",
     }
 
     componentDidMount() {
@@ -35,12 +37,23 @@ export class LED extends Component {
         manager.UnRegisterProjectPorts(this.props.instance);
     }
 
+    handlecolorchange = (next_color) => {
+        if (this.state.color === next_color) {
+            return;
+        }
+        else {
+            this.setState({
+                color: next_color,
+            })
+        }
+    }
+
     render() {
 
         let on = this.state.inputs[0] === 1 ? true : false;
 
         return (      
-            <LEDCore onOff={on}/>
+            <LEDCore onOff={on} color={this.state.color} oncolorchange={this.handlecolorchange}/>
         );
     }
 }

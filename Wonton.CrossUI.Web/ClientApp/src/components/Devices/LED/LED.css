@@ -1,0 +1,27 @@
+﻿#colorbutton {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-left: -30px;
+    margin-top: 55px;
+    border-radius: 50%;
+}
+
+#colorbutton.g {
+    background: #66cc66;
+}
+
+#colorbutton.r {
+    background: #f31b1b;
+}
+
+#colorbutton.y {
+    background: #ed8a19;
+}
+
+#colorbutton:hover {
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+}
+
