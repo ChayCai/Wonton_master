@@ -55,35 +55,53 @@ export default class FPGAManager {
     }
 
     //更新输入端口映射
-    MapOutputPorts = (projectPortName, instance, instancePortIndex) => { 
-        let hardwarePortName = this.projectPortsMap.get(projectPortName); 
+    MapOutputPorts = (projectPortName, instance, instancePortIndex) => {
+        let hardwarePortName = this.projectPortsMap.get(projectPortName);
         let hardwarePortIndex = outputPortsMapping.get(hardwarePortName); //outputPortsMapping引自PortsMap
-
-        if (this.hardwarePortsMap.has(hardwarePortIndex)) {
-            let ms = this.hardwarePortsMap.get(hardwarePortIndex)
-            
-            let found = false;
-
-            for (var i = 0; i < ms.length; i++) {  
-                if (ms[i].instance === instance) {
-                    ms[i].index = instancePortIndex
-                    found = true
-                }
-            }  
-
-            if (!found) {
-                ms.push({instance: instance, index: instancePortIndex})
-            }
-            // this.hardwarePortsMap.set(hardwarePortIndex, ms);
-        } else {
-            this.hardwarePortsMap.set(hardwarePortIndex, [{instance: instance, index: instancePortIndex}]);
+        if (hardwarePortIndex == null) {
+            console.log("empty choice")
         }
-        
-        let project_ports = this.projectInstancePortsMap.get(instance);
-        project_ports[instancePortIndex] = projectPortName;
-        this.projectInstancePortsMap.set(instance, project_ports);
+        else {
+            if (this.hardwarePortsMap.has(hardwarePortIndex)) {
+                this.hardwarePortsMap.get(hardwarePortIndex).push({ instance: instance, index: instancePortIndex });
+            } else {
+                this.hardwarePortsMap.set(hardwarePortIndex, [{ instance: instance, index: instancePortIndex }]);
+            }
+            this.hardwarePortsMap.forEach((value, key) => {
+                for (var i = 0; i < value.length; i++) {
+                    if (value[i].instance === instance && value[i].index === instancePortIndex && key !== hardwarePortIndex) {
+                        value.splice(i, 1);
+                    }
+                }
+            }
+            )
+            //if (this.hardwarePortsMap.has(hardwarePortIndex)) {
+            //   let ms = this.hardwarePortsMap.get(hardwarePortIndex)
+            //    console.log("ms")
+            //    console.log(ms)
+            //    
+            //    let found = false;
+            //
+            //    for (var i = 0; i < ms.length; i++) {  
+            //        if (ms[i].instance === instance) {
+            //            ms[i].index = instancePortIndex
+            //           found = true
+            //        }
+            //    }  
+            //
+            //    if (!found) {
+            //        ms.push({instance: instance, index: instancePortIndex})
+            //    }
+            // this.hardwarePortsMap.set(hardwarePortIndex, ms);
+            //} else {
 
-        console.log(`Set Output Mapping ${instance}.${instancePortIndex} <= ${projectPortName}`);
+
+            let project_ports = this.projectInstancePortsMap.get(instance);
+            project_ports[instancePortIndex] = projectPortName;
+            this.projectInstancePortsMap.set(instance, project_ports);
+            console.log(`Set Output Mapping ${instance}.${instancePortIndex} <= ${projectPortName}`);
+            console.log(this.hardwarePortsMap)
+        }
     }
 
     //返回projectPortName
