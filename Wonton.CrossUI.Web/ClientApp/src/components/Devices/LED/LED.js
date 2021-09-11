@@ -15,7 +15,7 @@ export class LED extends Component {
 
     state = {
         inputs: [0],
-        color: "g",
+        color: "y",
     }
 
     componentDidMount() {
