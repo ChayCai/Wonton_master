@@ -56,7 +56,12 @@ export class ROM extends Component {
         this.setState({
             curoutput: result_data,
         })
-        let next_output=result_data.split('').map((item) => {
+    }
+
+    updateoutput = () => {
+        console.log("one time")
+        let next_output = new Array();
+        next_output=this.state.curoutput.split('').map((item) => {
             return parseInt(item);
         })
         manager.UpdateInput(this.props.instance, next_output);
@@ -64,6 +69,7 @@ export class ROM extends Component {
     }
 
     render() {
+        setInterval(this.updateoutput,1000)
         return (
             <ROMCore curoutput={this.state.curoutput} setcuroutput={this.setcuroutput} />
         );
