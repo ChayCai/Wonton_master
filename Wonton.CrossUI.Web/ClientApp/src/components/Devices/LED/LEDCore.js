@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, ModalHeader, ModalBody, ModalFooter, ButtonGroup, Button } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ButtonGroup, Button } from 'reactstrap';
 
 import ledOnG from './led_ong.svg';
 import ledOnR from './led_onr.svg';
