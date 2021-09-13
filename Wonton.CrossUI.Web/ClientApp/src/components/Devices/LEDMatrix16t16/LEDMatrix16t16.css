@@ -1303,6 +1303,12 @@
     margin-left: 140px;
 }
 
+.LEDMatrix16t16 #setbutton{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: -140px;
+}
+
 .LEDMatrix16t16 span.on {
     background: #ffffff;
 }

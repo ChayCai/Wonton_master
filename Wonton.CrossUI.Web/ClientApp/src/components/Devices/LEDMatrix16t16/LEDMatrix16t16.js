@@ -31,27 +31,9 @@ export class LEDMatrix16t16 extends Component {
             [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
             [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
         ],
-        onffDeltaTime: [
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        ]
+        deltaonoff: "OFF",
     } 
-    // 视觉暂留现象约0.4s
-
+ 
     componentDidMount() {
         let ins = this.props.instance;
 
@@ -107,9 +89,20 @@ export class LEDMatrix16t16 extends Component {
         manager.UnRegisterProjectPorts(this.props.instance);
     }
 
+    handlesetchange = (change) => {
+        if (this.state.deltaonoff === change) {
+            return
+        }
+        else {
+            this.setState({
+                deltaonoff: change,
+            })
+        }
+    }
+
     render() {
-        return (      
-            <LEDMatrix16t16Core onOff={this.state.onOff}/>
+        return (
+            <LEDMatrix16t16Core onOff={this.state.onOff} deltaonoff={this.state.deltaonoff} onsetchange={ this.handlesetchange}/>
         );
     }
 }
