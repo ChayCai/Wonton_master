@@ -35,7 +35,18 @@ Multilingual README：[English](./README.en-US.md), [简体中文](./README.md)
 
 ## Download from Github Release
 
-You can download Wonton installation package for any platform below
+You can download Wonton v1.1.2 installation package for any platform below
+
+| 操作系统             | 处理器  | 安装包下载                 |  包下载                       |
+| --------------------|--------| --------------------------|-------------------------------|
+| Windows             |  x64   | [.exe][rl-windows_112]    |  [.7z][rl-pkg-windows_112]    |
+| macOS 10.15         |  x64   | to be published           |      to be published          |
+| Ubuntu 20.04        |  x64   | to be published           |      to be published          |
+
+[rl-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/untagged-3c05e4d023a5f281372a/Wonton-1.1.2-win-setup.exe
+[rl-pkg-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/untagged-3c05e4d023a5f281372a/Wonton-1.1.2-win-x64.7z
+
+You can download Wonton v1.1.1 installation package for any platform below
 
 | Platform                        | Architecture | Installation Package      |  Package                      |
 | --------------------------------|--------------| --------------------------|-------------------------------|
@@ -202,6 +213,8 @@ You can download Wonton installation package for any platform below
     <tr>
         <td align="center"><a href="https://github.com/WangyuHello"><img src="https://avatars.githubusercontent.com/u/16507233?v=4" width="100px;" alt="WangyuHello" style="border-radius:50%;"/><br /><sub><b>WangyuHello</b></sub></a></td>
         <td align="center"><a href="https://github.com/GeraltShi"><img src="https://avatars.githubusercontent.com/u/25215492?v=4" width="100px;" alt="GeraltShi" style="border-radius:50%;"/><br /><sub><b>GeraltShi</b></sub></a></td>
-        <td align="center"><a href="https://github.com/ImgBotApp"><img src="https://avatars.githubusercontent.com/u/31427850?v=4" width="100px;" alt="ImgBotApp" style="border-radius:50%;"/><br /><sub><b>ImgBotApp</b></sub></a></td>
+        <td align="center"><a href="https://github.com/ImgBotApp"><img src="https://avatars.githubusercontent.com/u/31427850?v=4" width="100px;" alt="ImgBotApp" 
+        style="border-radius:50%;"/><br /><sub><b>ImgBotApp</b></sub></a></td>
+        <td align="center"><a href="https://github.com/Hi2129"><img src="https://avatars.githubusercontent.com/u/78773376?v=4" width="100px;" alt="Hi2129" style="border-radius:50%;"/><br /><sub><b>Hi2129</b></sub></a></td>
     </tr>
 </table>
