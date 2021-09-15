@@ -42,8 +42,8 @@
 | macOS 10.15         |  x64   | 待上传                     |  待上传                       |
 | Ubuntu 20.04        |  x64   | 待上传                     |  待上传                       |
 
-[rl-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/untagged-3c05e4d023a5f281372a/Wonton-1.1.2-win-setup.exe
-[rl-pkg-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/untagged-3c05e4d023a5f281372a/Wonton-1.1.2-win-x64.7z
+[rl-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-win-setup.exe
+[rl-pkg-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-win-x64.7z
 
 你可以为以下任意一个平台下载 Wonton1.1.1 安装包
 

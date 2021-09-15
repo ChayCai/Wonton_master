@@ -37,14 +37,14 @@ Multilingual README：[English](./README.en-US.md), [简体中文](./README.md)
 
 You can download Wonton v1.1.2 installation package for any platform below
 
-| 操作系统             | 处理器  | 安装包下载                 |  包下载                       |
+| Platform                | Architecture  |Installation Package             |  Package               |
 | --------------------|--------| --------------------------|-------------------------------|
-| Windows             |  x64   | [.exe][rl-windows_112]    |  [.7z][rl-pkg-windows_112]    |
+| Windows               |  x64   | [.exe][rl-windows_112]    |  [.7z][rl-pkg-windows_112]    |
 | macOS 10.15         |  x64   | to be published           |      to be published          |
 | Ubuntu 20.04        |  x64   | to be published           |      to be published          |
 
-[rl-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/untagged-3c05e4d023a5f281372a/Wonton-1.1.2-win-setup.exe
-[rl-pkg-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/untagged-3c05e4d023a5f281372a/Wonton-1.1.2-win-x64.7z
+[rl-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-win-setup.exe
+[rl-pkg-windows_112]:https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-win-x64.7z
 
 You can download Wonton v1.1.1 installation package for any platform below
 
