@@ -206,6 +206,7 @@
         <td align="center"><a href="https://github.com/WangyuHello"><img src="https://avatars.githubusercontent.com/u/16507233?v=4" width="100px;" alt="WangyuHello" style="border-radius:50%;"/><br /><sub><b>WangyuHello</b></sub></a></td>
         <td align="center"><a href="https://github.com/GeraltShi"><img src="https://avatars.githubusercontent.com/u/25215492?v=4" width="100px;" alt="GeraltShi" style="border-radius:50%;"/><br /><sub><b>GeraltShi</b></sub></a></td>
         <td align="center"><a href="https://github.com/ImgBotApp"><img src="https://avatars.githubusercontent.com/u/31427850?v=4" width="100px;" alt="ImgBotApp" style="border-radius:50%;"/><br /><sub><b>ImgBotApp</b></sub></a></td>
+        <td align="center"><a href="https://github.com/Hi2129"><img src="https://avatars.githubusercontent.com/u/78773376?v=4" width="100px;" alt="Hi2129" style="border-radius:50%;"/><br /><sub><b>Hi2129</b></sub></a></td>
     </tr>
 </table>
 
