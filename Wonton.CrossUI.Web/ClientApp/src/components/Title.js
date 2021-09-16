@@ -431,8 +431,8 @@ export class Title extends Component {
     }
 
     ClickAbout = (e) => {
-        // const w = window.open('https://github.com/WangyuHello/Wonton');
-        shell.openExternal("https://github.com/WangyuHello/Wonton");
+        // const w = window.open('https://github.com/Hi2129/Wonton_master');
+        shell.openExternal("https://github.com/Hi2129/Wonton_master");
     }
 
     CloseApp = () => {
