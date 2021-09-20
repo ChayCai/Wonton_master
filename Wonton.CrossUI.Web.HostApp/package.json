@@ -4,13 +4,13 @@
   "version": "1.1.2",
   "main": "main.js",
   "author": {
-    "name": "Wang Yu",
-    "email": "wwangyuu@outlook.com",
-    "url": "https://www.github.com/WangyuHello"
+    "name": "Cai Chang",
+    "email": "hi_from_cc2129@163.com",
+    "url": "https://www.github.com/Hi2129"
   },
   "license": "MIT",
-  "homepage": "https://www.github.com/WangyuHello/Wonton",
-  "repository": "https://www.github.com/WangyuHello/Wonton",
+  "homepage": "https://www.github.com/Hi2129/Wonton_master",
+  "repository": "https://www.github.com/Hi2129/Wonton_master",
   "maintainer": "Wang Yu",
   "scripts": {
     "prestart": "tsc",
