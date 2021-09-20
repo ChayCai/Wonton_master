@@ -339,7 +339,7 @@ class Myspan extends Component {
                                 deltaonoff: this.props.myonoff,
                             })
                         },
-                        500
+                        400
                     )
                 }
             }
