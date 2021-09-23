@@ -575,7 +575,7 @@ namespace Wonton.CrossUI.Web.Controllers
             }
             else if (osx)
             { 
-                path = Path.Combine("/Applications", "gtkwave.app", "Contents", "Resources", "bin", "gtkwave");
+                path = Path.Combine("/Desktop", "gtkwave.app", "Contents", "Resources", "bin", "gtkwave");
             }
             t.ProcessName = path;
             t.Argument = waveformpath;
