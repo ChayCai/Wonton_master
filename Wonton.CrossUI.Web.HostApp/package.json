@@ -11,7 +11,7 @@
   "license": "MIT",
   "homepage": "https://www.github.com/Hi2129/Wonton_master",
   "repository": "https://www.github.com/Hi2129/Wonton_master",
-  "maintainer": "Wang Yu",
+  "maintainer": "Cai Chang",
   "scripts": {
     "prestart": "tsc",
     "start": "cross-env NODE_ENV=development electron .",
@@ -33,7 +33,7 @@
   "build": {
     "appId": "edu.Wonton.app",
     "productName": "Wonton",
-    "copyright": "Copyright © 2021 Wang Yu",
+    "copyright": "Copyright © 2021 Cai Chang",
     "compression": "maximum",
     "directories": {
       "output": "../../../../Wonton.CrossUI.Web/bin/Desktop"
