@@ -40,7 +40,7 @@
 | --------------------|--------| --------------------------|-------------------------------|
 | Windows             |  x64   | [.exe][rl-windows_112]    |  [.7z][rl-pkg-windows_112]    |
 | macOS 10.15         |  x64   | [.dmg][rl-macos_112]      |  [.7z][rl-pkg-macos_112]      |
-| Ubuntu 20.04        |  x64   | [.deb][rl-ubuntu_112]    |   [.7z][rl--pkg-ubuntu_112]    |
+| Ubuntu 20.04        |  x64   | [.deb][rl-ubuntu_112]    |   [.7z][rl-pkg-ubuntu_112]    |
 
 [rl-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-win-setup.exe
 [rl-pkg-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-win-x64.7z
