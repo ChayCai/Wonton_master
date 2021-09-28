@@ -46,8 +46,8 @@
 [rl-pkg-windows_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-win-x64.7z
 [rl-macos_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-mac.dmg
 [rl-pkg-macos_112]:  https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-mac.7z
-[rl-ubuntu_112] : https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-linux-amd64.deb
-[rl-pkg-ubuntu_112] : https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-linux-x64.7z
+[rl-ubuntu_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-linux-amd64.deb
+[rl-pkg-ubuntu_112]: https://github.com/Hi2129/Wonton_master/releases/download/v1.1.2/Wonton-1.1.2-linux-x64.7z
 
 
 你可以为以下任意一个平台下载 Wonton1.1.1 安装包
