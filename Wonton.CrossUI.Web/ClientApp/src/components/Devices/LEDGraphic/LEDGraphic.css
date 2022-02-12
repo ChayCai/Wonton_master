@@ -1,0 +1,584 @@
+﻿.LEDGraphic {
+    height: 300px;
+    width: 600px;
+    background-color: #43506C;
+    position: absolute;
+    margin-left: 60px;
+    margin-top: -150px;
+    border-radius: 4px;
+}
+
+.LEDGraphic>div {
+    height: 256px;
+    width: 32px;
+}
+
+#LED8t64bit00 {
+    position: absolute;
+    margin-left: 44px;
+    margin-top: 22px;
+}
+
+#LED8t64bit01 {
+    position: absolute;
+    margin-left: 76px;
+    margin-top: 22px;
+}
+
+#LED8t64bit02 {
+    position: absolute;
+    margin-left: 108px;
+    margin-top: 22px;
+}
+
+#LED8t64bit03 {
+    position: absolute;
+    margin-left: 140px;
+    margin-top: 22px;
+}
+
+#LED8t64bit04 {
+    position: absolute;
+    margin-left: 172px;
+    margin-top: 22px;
+}
+
+#LED8t64bit05 {
+    position: absolute;
+    margin-left: 204px;
+    margin-top: 22px;
+}
+
+#LED8t64bit06 {
+    position: absolute;
+    margin-left: 236px;
+    margin-top: 22px;
+}
+
+#LED8t64bit07 {
+    position: absolute;
+    margin-left: 268px;
+    margin-top: 22px;
+}
+
+#LED8t64bit10 {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 22px;
+}
+
+#LED8t64bit11 {
+    position: absolute;
+    margin-left: 332px;
+    margin-top: 22px;
+}
+
+#LED8t64bit12 {
+    position: absolute;
+    margin-left: 364px;
+    margin-top: 22px;
+}
+
+#LED8t64bit13 {
+    position: absolute;
+    margin-left: 396px;
+    margin-top: 22px;
+}
+
+#LED8t64bit14 {
+    position: absolute;
+    margin-left: 428px;
+    margin-top: 22px;
+}
+
+#LED8t64bit15 {
+    position: absolute;
+    margin-left: 460px;
+    margin-top: 22px;
+}
+
+#LED8t64bit16 {
+    position: absolute;
+    margin-left: 492px;
+    margin-top: 22px;
+}
+
+#LED8t64bit17 {
+    position: absolute;
+    margin-left: 524px;
+    margin-top: 22px;
+}
+
+.LED8bit {
+    height: 4px;
+    width: 32px;
+}
+
+.LEDGraphic #LED8bit00 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.LEDGraphic #LED8bit01 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 4px;
+}
+
+.LEDGraphic #LED8bit02 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 8px;
+}
+
+.LEDGraphic #LED8bit03 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 12px;
+}
+
+.LEDGraphic #LED8bit04 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 16px;
+}
+
+.LEDGraphic #LED8bit05 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+.LEDGraphic #LED8bit06 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 24px;
+}
+
+.LEDGraphic #LED8bit07 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 28px;
+}
+
+.LEDGraphic #LED8bit08 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 32px;
+}
+
+.LEDGraphic #LED8bit09 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 36px;
+}
+
+.LEDGraphic #LED8bit10 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 40px;
+}
+
+.LEDGraphic #LED8bit11 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 44px;
+}
+
+.LEDGraphic #LED8bit12 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 48px;
+}
+
+.LEDGraphic #LED8bit13 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 52px;
+}
+
+.LEDGraphic #LED8bit14 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 56px;
+}
+
+.LEDGraphic #LED8bit15 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 60px;
+}
+
+.LEDGraphic #LED8bit16 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 64px;
+}
+
+.LEDGraphic #LED8bit17 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 68px;
+}
+
+.LEDGraphic #LED8bit18 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 72px;
+}
+
+.LEDGraphic #LED8bit19 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 76px;
+}
+
+.LEDGraphic #LED8bit20 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 80px;
+}
+
+.LEDGraphic #LED8bit21 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 84px;
+}
+
+.LEDGraphic #LED8bit22 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 88px;
+}
+
+.LEDGraphic #LED8bit23 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 92px;
+}
+
+.LEDGraphic #LED8bit24 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 96px;
+}
+
+.LEDGraphic #LED8bit25 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 100px;
+}
+
+.LEDGraphic #LED8bit26 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 104px;
+}
+
+.LEDGraphic #LED8bit27 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 108px;
+}
+
+.LEDGraphic #LED8bit28 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 112px;
+}
+
+.LEDGraphic #LED8bit29 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 116px;
+}
+
+.LEDGraphic #LED8bit30 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 120px;
+}
+
+.LEDGraphic #LED8bit31 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 124px;
+}
+
+.LEDGraphic #LED8bit32 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 128px;
+}
+
+.LEDGraphic #LED8bit33 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 132px;
+}
+
+.LEDGraphic #LED8bit34 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 136px;
+}
+
+.LEDGraphic #LED8bit35 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 140px;
+}
+
+.LEDGraphic #LED8bit36 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 144px;
+}
+
+.LEDGraphic #LED8bit37 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 148px;
+}
+
+.LEDGraphic #LED8bit38 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 152px;
+}
+
+.LEDGraphic #LED8bit39 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 156px;
+}
+
+.LEDGraphic #LED8bit40 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 160px;
+}
+
+.LEDGraphic #LED8bit41 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 164px;
+}
+
+.LEDGraphic #LED8bit42 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 168px;
+}
+
+.LEDGraphic #LED8bit43 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 172px;
+}
+
+.LEDGraphic #LED8bit44 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 176px;
+}
+
+.LEDGraphic #LED8bit45 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 180px;
+}
+
+.LEDGraphic #LED8bit46 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 184px;
+}
+
+.LEDGraphic #LED8bit47 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 188px;
+}
+
+.LEDGraphic #LED8bit48 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 192px;
+}
+
+.LEDGraphic #LED8bit49 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 196px;
+}
+
+.LEDGraphic #LED8bit50 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 200px;
+}
+
+.LEDGraphic #LED8bit51 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 204px;
+}
+
+.LEDGraphic #LED8bit52 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 208px;
+}
+
+.LEDGraphic #LED8bit53 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 212px;
+}
+
+.LEDGraphic #LED8bit54 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 216px;
+}
+
+.LEDGraphic #LED8bit55 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 220px;
+}
+
+.LEDGraphic #LED8bit56 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 224px;
+}
+
+.LEDGraphic #LED8bit57 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 228px;
+}
+
+.LEDGraphic #LED8bit58 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 232px;
+}
+
+.LEDGraphic #LED8bit59 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 236px;
+}
+
+.LEDGraphic #LED8bit60 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 240px;
+}
+
+.LEDGraphic #LED8bit61 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 244px;
+}
+
+.LEDGraphic #LED8bit62 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 248px;
+}
+
+.LEDGraphic #LED8bit63 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 252px;
+}
+
+.LEDGraphic #span0 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic #span0 {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic #span1 {
+    position: absolute;
+    margin-left: 4px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic #span2 {
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic #span3 {
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic #span4 {
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic #span5 {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic #span6 {
+    position: absolute;
+    margin-left: 24px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic #span7 {
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 0px;
+    height: 4px;
+    width: 4px;
+}
+
+.LEDGraphic span {
+    width: 4px;
+    height: 4px;
+    background: #ffffff;
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+}
+
+.LEDGraphic span.on {
+    background: #000000;
+}

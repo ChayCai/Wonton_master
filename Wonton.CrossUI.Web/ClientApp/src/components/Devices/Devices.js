@@ -18,6 +18,8 @@ import { LEDMatrix16t16 } from "./LEDMatrix16t16/LEDMatrix16t16";
 import { LEDMatrix16t16Core } from "./LEDMatrix16t16/LEDMatrix16t16Core";
 import { LEDText } from "./LEDText/LEDText";
 import { LEDTextCore } from "./LEDText/LEDTextCore";
+import { LEDGraphic } from "./LEDGraphic/LEDGraphic";
+import { LEDGraphicCore } from "./LEDGraphic/LEDGraphicCore";
 import { ROM } from "./ROM/ROM";
 import { ROMCore } from "./ROM/ROMCore";
 
@@ -35,7 +37,8 @@ export const OutputDeviceMap = new Map([
     ['LEDMatrix4t4', [LEDMatrix4t4, LEDMatrix4t4Core]],
     ['LEDMatrix8t8', [LEDMatrix8t8, LEDMatrix8t8Core]],
     ['LEDMatrix16t16', [LEDMatrix16t16, LEDMatrix16t16Core]],
-    ['LEDText', [LEDText, LEDTextCore]]
+    ['LEDText', [LEDText, LEDTextCore]],
+    ['LEDGraphic', [LEDGraphic, LEDGraphicCore]]
 ])
 
 export const DataGenDeviceMap = new Map([
