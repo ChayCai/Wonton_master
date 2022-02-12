@@ -23,7 +23,6 @@ import { LEDGraphicCore } from "./LEDGraphic/LEDGraphicCore";
 import { ROM } from "./ROM/ROM";
 import { ROMCore } from "./ROM/ROMCore";
 
-
 export const InputDeviceMap = new Map([
     ['Button', [Button, ButtonCore]],
     ['HButton', [HButton, HButtonCore]],

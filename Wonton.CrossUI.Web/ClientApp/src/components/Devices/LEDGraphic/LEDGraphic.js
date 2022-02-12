@@ -134,6 +134,7 @@ export class LEDGraphic extends Component {
     }
 
     render() {
+
         return (
             <LEDGraphicCore onoff={this.state.onoff}></LEDGraphicCore>
         );

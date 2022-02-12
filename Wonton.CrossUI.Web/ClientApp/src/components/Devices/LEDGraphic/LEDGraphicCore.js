@@ -134,6 +134,7 @@ class LED8bit extends Component {
             }
         }
         return (
+
             <div id={this.props.myid} className="LED8bit">
                 <div id="span0"><span className = {onoff[0] ? "on" : ""}></span></div>
                 <div id="span1"><span className = {onoff[1] ? "on" : ""}></span></div>
@@ -144,6 +145,7 @@ class LED8bit extends Component {
                 <div id="span6"><span className = {onoff[6] ? "on" : ""}></span></div>
                 <div id="span7"><span className = {onoff[7] ? "on" : ""}></span></div>
             </div>
+
             );
     }
 }
