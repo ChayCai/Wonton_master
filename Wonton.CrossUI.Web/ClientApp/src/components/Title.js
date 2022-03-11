@@ -24,6 +24,7 @@ export class Title extends Component {
         isFileModalOpen: false,
         isNewModalOpen: false,
         isOpenModalOpen: false,
+        isWarnModalOpen: false,
         isMaximized: false,
         isSettingDropdownOpen: false,
         titlePjName: '',
@@ -165,7 +166,9 @@ export class Title extends Component {
     }
 
     FreqChange = (event) => {
-        this.setState({runHz: event.target.value});
+        if (!this.state.isRunning) {
+            this.setState({ runHz: event.target.value });
+        }
     }
 
     ClickRun = async () => {
@@ -237,7 +240,13 @@ export class Title extends Component {
     }
 
     ClickProgram = async () => {
-        await manager.Program(this.state.bitfile);
+        if (!this.state.isRunning) {
+            await manager.Program(this.state.bitfile);
+        } else {
+            this.setState({
+                isWarnModalOpen: true,
+            });
+        }
     }
 
     ClickProgrammToggle = () => {
@@ -268,11 +277,17 @@ export class Title extends Component {
     }
 
     NewPjToggle = (event) => {
-        this.setState((prevState) => {
-            return {
-                isNewModalOpen: !prevState.isNewModalOpen
-            }
-        })
+        if (!this.state.isRunning) {
+            this.setState((prevState) => {
+                return {
+                    isNewModalOpen: !prevState.isNewModalOpen
+                }
+            })
+        } else {
+            this.setState({
+                isWarnModalOpen: true,
+            });
+        }
     }
 
     NewPj = async (event) => {
@@ -335,17 +350,22 @@ export class Title extends Component {
     }
 
     OpenPjToggle = async (event) => {
+        if (!this.state.isRunning) {
+            if (isElectron()) {
+                ipcRenderer.send('open-project-file');
+            } else {
+                await this.onOpenProjectCallback({}, "F:\\Repo\\Wonton\\Wonton.Test\\haha4.hwproj")
+            }
+        } else {
+            this.setState({
+                isWarnModalOpen: true,
+            });
+        }
         // this.setState((prevState) => {
         //     return {
         //         isOpenModalOpen: !prevState.isOpenModalOpen
         //     }
         // })
-        if (isElectron()) {
-            ipcRenderer.send('open-project-file');
-        } else {
-            await this.onOpenProjectCallback({}, "F:\\Repo\\Wonton\\Wonton.Test\\haha4.hwproj")
-        }
-        
     }
 
     // Open = (event) => {
@@ -435,10 +455,18 @@ export class Title extends Component {
         shell.openExternal("https://github.com/Hi2129/Wonton_master");
     }
 
+    CloseWarn = () => {
+        this.setState({
+            isWarnModalOpen: false,
+        });
+    }
+
     CloseApp = () => {
         if (this.state.isRunning)
         {
-
+            this.setState({
+                isWarnModalOpen: true,
+            });
         }
         else if (this.state.modified) {
             ipcRenderer.send('show-unsave-prompt');
@@ -467,7 +495,8 @@ export class Title extends Component {
                     <ModalBody>
                         <Start onOpen={this.OpenPjToggle} onNew={this.NewPjToggle} recentProjects={this.state.recentProjects}></Start>
                     </ModalBody>
-                </Modal>
+                    </Modal>
+
 
                 <div className="myTitle">
                     <div style={{ display: 'flex', alignItems: 'top', marginLeft: titleLeftMargin, marginTop: '8px'}}>
@@ -527,6 +556,9 @@ export class Title extends Component {
                                 <Button color="secondary" onClick={this.OpenPjToggle}>关闭</Button>
                             </ModalFooter>
                         </Modal> */}
+                        <Modal isOpen={this.state.isWarnModalOpen} toggle={this.CloseWarn}>
+                            <ModalBody>Warning: 请先停止当前项目运行</ModalBody>
+                        </Modal>
                         <Modal isOpen={this.state.isNewModalOpen} toggle={this.NewPjToggle} className="SquareModal" >
                             <ModalHeader >新建工程</ModalHeader>
                             <ModalBody>

@@ -27,10 +27,16 @@ export class MainPanel extends PureComponent {
 
     componentWillReceiveProps(nextProps) {
         let data = nextProps.panelData;
+        let counts = [];
+        let maxCount;
+        for (var ins in data.layout) {
+            counts.push(data.layout[ins].i.slice(1,));
+        }
+        maxCount = Math.max(...counts);
         if (data != null && this.state.layout == null) {
             this.setState({
                 layout: data.layout,
-                instanceCounter: data.layout.length
+                instanceCounter: maxCount
             }, () => {
                 this.layoutChangeFlag = true;
                 // console.log("state callback2")
