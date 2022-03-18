@@ -32,7 +32,12 @@ export class MainPanel extends PureComponent {
         for (var ins in data.layout) {
             counts.push(data.layout[ins].i.slice(1,));
         }
-        maxCount = Math.max(...counts);
+        if (counts.length === 0) {
+            maxCount = 0;
+        }
+        else {
+            maxCount = Math.max(...counts);
+        }
         if (data != null && this.state.layout == null) {
             this.setState({
                 layout: data.layout,
